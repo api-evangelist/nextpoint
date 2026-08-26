@@ -1,0 +1,71 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of nextpointtx.com and www.nextpointtx.com
+note: >-
+  No /.well-known document is served. nextpointtx.com is a WordPress site behind an
+  nginx front end that answers every unrecognised path with the 158,191-byte homepage
+  HTML — /.well-known/security.txt and /llms.txt return a genuine nginx 404, while
+  /.well-known/openid-configuration, /oauth-authorization-server, /api-catalog,
+  /ai-plugin.json, /agent-card.json and /agent.json all return HTTP 200 carrying that
+  same homepage shell, byte-identical to a nonsense control path
+  (/nonexistent-xyz-123/). Those 200s are soft-404s, not documents, and are recorded
+  as misses. No WellKnown or SecurityTxt pointer is emitted.
+hosts:
+- host: nextpointtx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+- host: www.nextpointtx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft-404 — homepage HTML shell, not a document

@@ -64,5 +64,21 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-NextPoint is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/nextpoint_stock/
+NextPoint Therapeutics, Inc. is a clinical-stage immuno-oncology biotechnology company headquartered
+in Cambridge, Massachusetts, developing first-in-class precision therapeutics against the
+B7-H7/HHLA2 – KIR3DL3 immune checkpoint axis (NPX887, NPX372, NPX125). It is a therapeutics
+developer, not a software company, and publishes no API, SDK, developer program or machine-readable
+specification. This profile records that absence, with the probes behind it.
+
+- Website: https://nextpointtx.com/
+- About: https://nextpointtx.com/about-us/
+- Pipeline: https://nextpointtx.com/our-pipeline/
+- News & Publications: https://nextpointtx.com/news-publications/
+- Secondary-market listing (harvest source): https://forgeglobal.com/nextpoint_stock/
+
+### Coverage
+
+`state: none` / `not-a-software-company` — see `x-coverage` in `apis.yml` for the evidence.
+The `.well-known` probe log is in `well-known/nextpoint-well-known.yml`; note that
+`nextpointtx.com` answers every unrecognised path with its 158,191-byte homepage, so the
+`200`s recorded there are soft-404s, not documents.
